@@ -11,10 +11,15 @@ ReactDOM.render(
   <React.StrictMode>
     <Carousel /> 
     <Form className="center_this"/> 
+    <p></p>
     <Reviews /> 
+    <p></p>
     <WC />
+    <p></p>
     <Feed />
+    <p></p>
     <EmailList />
+    <p></p>
   </React.StrictMode>,
   document.getElementById('root')
 );

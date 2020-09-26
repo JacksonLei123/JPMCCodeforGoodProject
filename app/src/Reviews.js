@@ -71,6 +71,7 @@ class Reviews extends React.Component {
         <SubList entries={this.state.data.slice(begin, end)} />
         <Button variant="contained" color="default" onClick={() => this.handleMvmt(-1)}> <ArrowBackwardIcon/> </Button>
         <Button variant="contained" color="default" onClick={() => this.handleMvmt(1)}> <ArrowForwardIcon/> </Button>
+        <p></p>
         <Divider/>
       </div>
     );
