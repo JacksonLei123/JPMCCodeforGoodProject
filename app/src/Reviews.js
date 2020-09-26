@@ -18,18 +18,37 @@ class Reviews extends React.Component {
   }
 
   componentWillMount() {
-    fetch('./data.csv')
-    .then((r) => r.text())
-    .then(text => {
-      let tmp = text.split("\n").map((entry, idx) => {
-        return {
-          "message": entry,
-          "stars": (2 - idx % 3) + 3,
-        };
+    const reqOpts = {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    };
+
+    fetch('http://localhost:8080/api/reviews/published', reqOpts)
+      .then(response => response.json())
+      .then((data) => {
+        let newData = data.map((obj, idx) => {
+          return {
+            "message": obj.description,
+            "stars": (2 - idx % 3) + 3,
+          }
+        });
+
+        this.setState({data: [...this.state.data, ...newData]}); 
+      }) 
+      .then(() => {
+        fetch('./data.csv')
+        .then((r) => r.text())
+        .then(text => {
+        let tmp = text.split("\n").map((entry, idx) => {
+          return {
+            "message": entry,
+            "stars": (2 - idx % 3) + 3,
+          };
+        });
+        this.setState({data: [...this.state.data, ...tmp]});
       });
-      console.log(tmp.length); 
-      this.setState({data: tmp});
     });
+    
   }
 
   handleMvmt = (i) => {
