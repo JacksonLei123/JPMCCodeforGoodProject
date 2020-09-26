@@ -48,8 +48,10 @@ export default function EmailList(props) {
     <form onSubmit={handleSubmit}>
         
       <TextField id="filled-basic" label="Join our Email List!" variant="filled" value={email} onChange={e => setEmail(e.target.value) } />
-      <input type="submit" value="Submit" />
+      <p></p>
+      <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     </div>
   );
 }
+
