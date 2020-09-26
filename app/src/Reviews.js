@@ -1,5 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import ArrowBackwardIcon from '@material-ui/icons/ArrowBack'; 
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
@@ -56,7 +58,7 @@ class Reviews extends React.Component {
     fetch('./data.csv')
     .then((r) => r.text())
     .then(text => {
-      let tmp = text.split("\n").slice(0, 10).map((entry) => {
+      let tmp = text.split("\n").map((entry) => {
         return {
           "message": entry,
         };
@@ -86,8 +88,8 @@ class Reviews extends React.Component {
     return (
       <div className="Reviews">
         <SubList entries={this.state.data.slice(begin, end)} />
-        <Button variant="contained" color="primary" onClick={() => this.handleMvmt(-1)}> Left </Button>
-        <Button variant="contained" color="secondary" onClick={() => this.handleMvmt(1)}> Right </Button>
+        <Button variant="contained" color="default" onClick={() => this.handleMvmt(-1)}> <ArrowBackwardIcon/> </Button>
+        <Button variant="contained" color="default" onClick={() => this.handleMvmt(1)}> <ArrowForwardIcon/> </Button>
       </div>
     );
   }

@@ -11,12 +11,13 @@ class Homepage extends ReactBootstrap {
     constructor(props) {
         super(props);
     
-    
+    // main frame for the homepage I'm assuming we're putting functions 
+       // and objects here but not sure how
       }
 
 } 
 
-
+// tab function, returns tabs
 export default function tabs() {
 
     return (
@@ -36,6 +37,8 @@ export default function tabs() {
 </Tabs>
     )
 }
+
+// below is the basic templates for videos and pictures
 
 // class Video extends Component {
 //     render() {
