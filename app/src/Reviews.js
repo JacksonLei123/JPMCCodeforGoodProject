@@ -3,55 +3,20 @@ import { render } from 'react-dom';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackwardIcon from '@material-ui/icons/ArrowBack'; 
 import './App.css';
-import { makeStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Divider from '@material-ui/core/Divider';
+import SubList from './sublist.js'
 import Button from '@material-ui/core/Button'; 
+
 const pageSize = 3; 
 
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: '100%',
-    maxWidth: 360,
-    backgroundColor: theme.palette.background.paper,
-  },
-  main: {
-    alignContent: 'center',
-  },
-}));
 
 
 
-function SubList(props) {
-  const classes = useStyles(); 
 
-  return (
-    <List component="nav" className={classes.root} aria-label="mailbox folders">
-
-      {
-        props.entries.map((entry, idx) => {
-          return (
-            <div id={idx}>
-              <ListItem button>
-                <ListItemText primary={entry.message}/>
-              </ListItem>
-              <Divider />
-            </div>
-          )
-        })
-      }
-    </List>
-  );
-}
 class Reviews extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {data: [], start_idx: 0};  
-
   }
 
   componentWillMount() {
