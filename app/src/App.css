@@ -37,3 +37,20 @@
   }
 }
 
+.Nav{
+  color: #873494 !important;
+  background-color: black !important; 
+  height:20% !important; 
+  font-size: large !important;
+  text-align: center !important;
+}
+
+
+
+.center_this {
+  text-align: center;
+}
+
+.Reviews {
+  text-align: center;
+}

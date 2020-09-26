@@ -1,16 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import Navbar from 'react-bootstrap/Navbar';
+import {Nav, Form, Button, FormControl,NavDropdown} from 'react-bootstrap';
+function Carousel() {
   return (
+
     <div className="App">
-      
+    <Navbar className="Nav" bg="light" expand="lg">
+    <Navbar.Brand className="Nav" href="#home">Paul Quinn</Navbar.Brand>
+  </Navbar>
     </div>
   );
 }
 
-export default App;
+export default Carousel;
 
 // <!doctype html>
 // <html lang="en">
