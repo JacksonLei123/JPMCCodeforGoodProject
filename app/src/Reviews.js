@@ -11,10 +11,6 @@ import Typography from '@material-ui/core/Typography';
 const pageSize = 3; 
 
 
-
-
-
-
 class Reviews extends React.Component {
   constructor(props) {
     super(props);
