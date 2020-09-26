@@ -4,15 +4,14 @@ import Reviews from './Reviews.js';
 import WC from './WC.js';
 import Form from './form.js'; 
 import './index.css';
-import Carousel from './Carousel'
+import Carousel from './carousel.js'
 ReactDOM.render(
   <React.StrictMode>
-
-    <Reviews />
-    <Form className="center_this"/>
-    <Carousel/> 
+{/* <Carousel/>  */}
+<Form className="center_this"/> 
     <Reviews /> 
     <WC />
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
