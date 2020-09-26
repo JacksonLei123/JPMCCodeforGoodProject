@@ -3,8 +3,10 @@ import { render } from 'react-dom';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackwardIcon from '@material-ui/icons/ArrowBack'; 
 import './App.css';
+import Divider from '@material-ui/core/Divider';
 import SubList from './sublist.js'
 import Button from '@material-ui/core/Button'; 
+import Typography from '@material-ui/core/Typography';
 
 const pageSize = 3; 
 
@@ -23,9 +25,10 @@ class Reviews extends React.Component {
     fetch('./data.csv')
     .then((r) => r.text())
     .then(text => {
-      let tmp = text.split("\n").map((entry) => {
+      let tmp = text.split("\n").map((entry, idx) => {
         return {
           "message": entry,
+          "stars": (2 - idx % 3) + 3,
         };
       });
       console.log(tmp.length); 
@@ -53,8 +56,11 @@ class Reviews extends React.Component {
     return (
       <div className="Reviews">
         <SubList entries={this.state.data.slice(begin, end)} />
+        <Divider/>
         <Button variant="contained" color="default" onClick={() => this.handleMvmt(-1)}> <ArrowBackwardIcon/> </Button>
         <Button variant="contained" color="default" onClick={() => this.handleMvmt(1)}> <ArrowForwardIcon/> </Button>
+        
+        <Typography>{this.state.start_idx * 3 + 1}/{this.state.data.length}</Typography>
       </div>
     );
   }
