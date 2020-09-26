@@ -11,7 +11,7 @@ class Homepage extends ReactBootstrap {
     constructor(props) {
         super(props);
     
-    // main frame for the homepage I'm assuming we're putting functions 
+       // main frame for the homepage I'm assuming we're putting functions 
        // and objects here but not sure how
       }
 
