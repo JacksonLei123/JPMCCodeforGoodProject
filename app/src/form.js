@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Form(props) {
   const [review, setReview] = useState("");
+  const [email, setEmail] = useState(""); 
   const classes = useStyles(); 
   
   const handleSubmit = (evt) => {
@@ -26,17 +27,20 @@ export default function Form(props) {
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({description: review })
+        body: JSON.stringify({description: review + "   -   " + email })
     };
+    
     fetch('http://localhost:8080/api/reviews', requestOptions)
         .then(response => response.json());
     setReview(""); 
+    setEmail(""); 
   }
 
   return (
     <div className="center_this">
     <form onSubmit={handleSubmit}>       
       <TextField width="100%" id="filled-basic" label="Tell us about your experience..." variant="filled" value={review} onChange={e => setReview(e.target.value) } />
+      <TextField id="filled-basic" label="PQC Email" variant="filled" value={email} onChange={e => setEmail(e.target.value) } />
       <div>
       <p></p>
       </div>

@@ -16,3 +16,4 @@ module.exports = mongoose => {
     const Review = mongoose.model("review", schema);
     return Review;
 };
+

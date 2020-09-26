@@ -4,13 +4,13 @@ import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterH
 
 function Feed() {
   return (
-    <div>
+    
       <TwitterTimelineEmbed
-        sourceType="provile"
+        sourceType="profile"
         screenName="PaulQuinnTigers"
         options={{height: 400}}
       />
-    </div>
+    
 
   );
 }
