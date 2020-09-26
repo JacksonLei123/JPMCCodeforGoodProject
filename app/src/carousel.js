@@ -4,70 +4,79 @@ import Navbar from 'react-bootstrap/Navbar';
 import {Nav, Form, Button, FormControl,NavDropdown} from 'react-bootstrap';
 function Carousel() {
   return (
-
+    <div>
     <div className="App">
-    <Navbar className="Nav" bg="light" expand="lg">
-    <Navbar.Brand className="Nav" href="#home">Paul Quinn</Navbar.Brand>
-  </Navbar>
+      <Navbar className="Nav" bg="light" expand="lg">
+      <Navbar.Brand className="Nav" href="#home">Paul Quinn</Navbar.Brand>
+      </Navbar>
+      
+    </div>
+    <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+      <ol className="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+      </ol>
+      <div className="carousel-inner">
+        <div className="carousel-item active">
+          <a href = "http://www.pqc.edu/life-in-dallas/">
+            <img className="d-block w-100" src="https://i.ibb.co/G728tF6/Webp-net-resizeimage.jpg" alt="First slide"/>
+          </a>
+          <div className="carousel-caption d-none d-md-block">
+              <h5>Life in Dallas</h5>
+              <p>Click here to learn more about living the 4th largest metroplitan area</p>
+            </div>
+        </div>
+        <div className="carousel-item">
+          <a href = "http://www.pqc.edu/wp-content/uploads/2015/03/PQC-New-Model-Press-Release.pdf">
+          <img className="d-block w-100" src="https://i.ibb.co/bB6m8sh/Webp-net-resizeimage-1.jpg" alt="Second slide" />
+          </a>
+          <div className="carousel-caption d-none d-md-block">
+              <h5>New Tuition Model</h5>
+              <p>Click here to learn about the first urban work college and how students take on almost no financial burden</p>
+            </div>
+        </div>
+        <div className="carousel-item">
+          <a href = "http://www.pqc.edu/degree-programs/">
+          <img className="d-block w-100" src="https://i.ibb.co/KXKN0kc/Webp-net-resizeimage-2.jpg" alt="Third slide" />
+          </a>
+          <div className="carousel-caption d-none d-md-block">
+              <h5>Degree Programs</h5>
+              <p>Click here to learn about starting your own company and leading in your field</p>
+            </div>
+        </div>
+        <div className="carousel-item">
+          <a href = "http://www.pqc.edu/we-over-me-farm/">
+          <img className="d-block w-100" src="https://i.ibb.co/840LwJq/Webp-net-resizeimage-3.jpg" alt="Fourth slide" />
+          </a>
+          <div className="carousel-caption d-none d-md-block">
+              <h5>We Over Me Farm</h5>
+              <p>Click here to learn about how we've grown over 30,000 pounds of produce for our community</p>
+            </div>
+        </div>
+        <div className="carousel-item">
+          <a href = "https://pqc-edu.squarespace.com/alumni">
+          <img className="d-block w-100" src="https://i.ibb.co/VxNx2qb/Webp-net-resizeimage-6.jpg" alt="Fifth slide" />
+      </a>
+          <div className="carousel-caption d-none d-md-block">
+              <h5>Alumni Affairs</h5>
+              <p>Click here to find about what today's students are up to</p>
+            </div>
+        </div>
+      </div>
+      <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="sr-only">Previous</span>
+      </a>
+      <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="sr-only">Next</span>
+      </a>
+    </div>
     </div>
   );
 }
 
 export default Carousel;
-
-// <!doctype html>
-// <html lang="en">
-//   <head>
-//     <!-- Required meta tags -->
-//     <meta charset="utf-8">
-//     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-//     <title>Hello, world!</title>
-//     <!-- Bootstrap CSS -->
-//     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-//     <!-- Optional JavaScript -->
-//     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-//     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-//     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-//     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-//   </head>
-//   <body>
-//     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-//         <ol class="carousel-indicators">
-//           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-//           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-//           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-//         </ol>
-//         <div class="carousel-inner">
-//           <div class="carousel-item active">
-//             <img class="d-block w-100" src="C:\Users\wajid\Downloads\phone.png" alt="First slide">
-//             <div class="carousel-caption d-none d-md-block">
-//                 <h5>Testing</h5>
-//                 <p>Testing</p>
-//               </div>
-//           </div>
-//           <div class="carousel-item">
-//             <img class="d-block w-100" src="C:\Users\wajid\Downloads\holo.png" alt="Second slide">
-//             <div class="carousel-caption d-none d-md-block">
-//                 <h5>Testing</h5>
-//                 <p>Testing</p>
-//               </div>
-//           </div>
-//           <div class="carousel-item">
-//             <img class="d-block w-100" src="C:\Users\wajid\Downloads\Smoke.png" alt="Third slide">
-//             <div class="carousel-caption d-none d-md-block">
-//                 <h5>Testing</h5>
-//                 <p>Testing</p>
-//               </div>
-//           </div>
-//         </div>
-//         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-//           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-//           <span class="sr-only">Previous</span>
-//         </a>
-//         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-//           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-//           <span class="sr-only">Next</span>
-//         </a>
-//       </div>
-//   </body>
-// </html>

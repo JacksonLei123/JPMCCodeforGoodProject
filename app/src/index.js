@@ -9,7 +9,7 @@ import Feed from './twitter_embed.js';
 import EmailList from './EmailList.js'; 
 ReactDOM.render(
   <React.StrictMode>
-    <Carousel/> 
+    <Carousel /> 
     <Form className="center_this"/> 
     <Reviews /> 
     <WC />
