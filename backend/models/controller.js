@@ -58,6 +58,7 @@ exports.findOne = (req, res) => {
             .status(500)
             .send({ message: "Error retrieving Review with id=" + id });
         });
+
 };
 
 // Update a Tutorial by the id in the request
@@ -83,6 +84,7 @@ exports.update = (req, res) => {
             message: "Error updating Review with id=" + id
           });
         });
+
 };
 
 // Delete a Tutorial with the specified id in the request
@@ -106,6 +108,7 @@ exports.delete = (req, res) => {
           message: "Could not delete Review with id=" + id
         });
       });
+
 };
 
 // Delete all Tutorials from the database.
@@ -122,6 +125,7 @@ exports.deleteAll = (req, res) => {
           err.message || "Some error occurred while removing all Reviews."
       });
     });
+
 };
 
 // Find all published Tutorials
