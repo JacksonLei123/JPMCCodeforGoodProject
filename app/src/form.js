@@ -35,10 +35,12 @@ export default function Form(props) {
 
   return (
     <div className="center_this">
-    <form onSubmit={handleSubmit}>
-        
-      <TextField id="filled-basic" label="Tell us about your experience..." variant="filled" value={review} onChange={e => setReview(e.target.value) } />
-      <input type="submit" value="Submit" />
+    <form onSubmit={handleSubmit}>       
+      <TextField width="100%" id="filled-basic" label="Tell us about your experience..." variant="filled" value={review} onChange={e => setReview(e.target.value) } />
+      <div>
+      <p></p>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     </div>
   );
