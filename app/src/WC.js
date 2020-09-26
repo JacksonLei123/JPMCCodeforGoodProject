@@ -1,43 +1,32 @@
 import React from 'react';
 import ReactWordCloud from 'react-wordcloud'; 
 
-// const words = [
-//     {
-//         text: 'told',
-//         value: 64,
-//     },
-//     {
-//         text: 'mistake',
-//         value: 11,
-//     },
-//     {
-//         text: 'thought',
-//         value: 16,
-//     },
-//     {
-//         text: 'bad',
-//         value: 17,
-//     },
-// ]; 
 
-
-class Reviews extends React.Component {
+class WC extends React.Component {
+    constructor(props) {
+        super(props); 
+        this.state = {data: []};
+    }
     componentWillMount() {
-        fetch('./data.csv')
+        fetch('./frequencies.txt')
         .then((r) => r.text())
         .then(text => {
                 let tmp = text.split("\n").map((entry, idx) => {
-                let A = tmp.split(","); 
+                let A = entry.split(","); 
                 return {
-                    "message": A[0],
-                    "stars": int(A[1]),
+                    "text": A[0],
+                    "value": parseInt(A[1]),
                 };
             });
-
+            this.setState({ data: tmp });
+            console.log(this.state.data); 
         });
     }
-}
-export default function WC (pass_words) {
-    return <ReactWordCloud words={pass_words} />
+
+    render() {
+        return (<ReactWordCloud words={this.state.data} />); 
+    }
 }
 
+
+export default WC; 
