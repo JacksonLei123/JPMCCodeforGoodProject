@@ -41,3 +41,11 @@
 .Reviews {
   text-align: center;
 }
+
+.Nav{
+  color: #873494 !important;
+  background-color: black !important; 
+  height:20% !important; 
+  font-size: large !important;
+  text-align: center !important;
+}
