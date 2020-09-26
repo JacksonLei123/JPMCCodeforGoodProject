@@ -4,25 +4,15 @@ import Sonnet from 'react-bootstrap-tabs';
 import {ReactDOM} from 'react-dom';
 import 'bootswatch/dist/cyborg/bootstrap.min.css'; 
 import logo from './logo192.png';
+import farm from './photos/farm.png'
+import citylights from './photos/citylights.png'
+import business from './photos/business.png'
 
 class NavBar extends Component {
 
     render() {
         return (
-    //     <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-    //     <Tab eventKey="home" title="Home">
-    //       <Sonnet />
-    //     </Tab>
-    //     <Tab eventKey="aboutpqc" title="About PQC">
-    //       <Sonnet />
-    //     </Tab>
-    //     <Tab eventKey="academics" title="Academics">
-    //       <Sonnet />
-    //     </Tab>
-    //     <Tab eventKey="reviews" title="Reviews">
-    //       <Sonnet />
-    //     </Tab>
-    //   </Tabs>
+
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
   <a className ="navbar-brand" href="#">Navbar</a>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,10 +25,10 @@ class NavBar extends Component {
         <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Features</a>
+        <a className="nav-link" href="#">Academics</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Pricing</a>
+        <a className="nav-link" href="#">Reviews</a>
       </li>
       <li className="nav-item">
         <a className="nav-link" href="#">About</a>
@@ -69,8 +59,11 @@ class Photos extends Component {
     render() {
 
         return (
+        <div>
+            <img src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR2mBgnBT496mG4UZ7oy9ETBBSSzuM3_gU9wA&usqp=CAU' alt="Italian Trulli"></img>
+        
+        </div>
             
-            <img src = {logo} alt="Italian Trulli"></img>
         );
 
     }
@@ -78,12 +71,27 @@ class Photos extends Component {
     
 }
 
+class Images extends Component {
+    render() {
+
+        return (
+        <div>
+            <img src = {farm} alt="farm"></img>
+            <img src = {citylights} alt = "citylights" ></img>
+            <img src = {business} alt = "business"></img>
+        </div>
+
+        );
+    }
+}
+
 class App extends Component {
 
     render() {
         return  (
-        <div><NavBar/> 
-        <br/><Photos/></div>
+        <div><Photos/>
+        <br/><NavBar/>
+        <br/><Images/></div>
 
             
     );
