@@ -23,6 +23,9 @@ module.exports = app => {
   
     // Create a new Tutorial
     router.delete("/", tutorials.deleteAll);
-  
+
+    // Create a new Email
+    router.post("/email", tutorials.addEmail); 
+    
     app.use('/api/reviews', router);
   };

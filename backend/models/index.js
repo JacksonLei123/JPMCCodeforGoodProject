@@ -9,5 +9,6 @@ db.mongoose = mongoose;
 
 db.url = process.env.DATABASE_URL; 
 db.reviews = require("./models.js")(mongoose); 
+db.emails = require("./emailmodel.js")(mongoose); 
 
 module.exports = db;

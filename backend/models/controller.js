@@ -1,6 +1,6 @@
 const db = require("../models/index.js");
 const Review = db.reviews;
-
+const Email = db.emails; 
 // Create and Save a new Tutorial
 exports.create = (req, res) => {
   // Validate request
@@ -141,3 +141,28 @@ exports.findAllPublished = (req, res) => {
       });
     });
 };
+
+exports.addEmail = (req, res) => {
+  if (!req.body.email) {
+    res.status(400).send({ message: "Content can not be empty!" });
+    return;
+  }
+
+  // Create a Tutorial
+  const email = new Email({
+    email: req.body.email,
+  });
+
+  // Save Tutorial in the database
+  email
+    .save(email)
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+        err.message || "Some error occurred while creating the Review."
+      });
+    });
+}

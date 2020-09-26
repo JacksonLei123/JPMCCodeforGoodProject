@@ -6,6 +6,7 @@ import Form from './form.js';
 import './index.css';
 import Carousel from './carousel.js';
 import Feed from './twitter_embed.js';
+import EmailList from './EmailList.js'; 
 ReactDOM.render(
   <React.StrictMode>
     <Carousel/> 
@@ -13,6 +14,7 @@ ReactDOM.render(
     <Reviews /> 
     <WC />
     <Feed />
+    <EmailList />
   </React.StrictMode>,
   document.getElementById('root')
 );
