@@ -34,11 +34,12 @@ export default function Form(props) {
   }
 
   return (
+    <div className="center_this">
     <form onSubmit={handleSubmit}>
         
-      <TextField id="filled-basic" label="Filled" variant="filled" value={review} onChange={e => setReview(e.target.value) } >Tell us about your experience...</TextField>
+      <TextField id="filled-basic" label="Tell us about your experience..." variant="filled" value={review} onChange={e => setReview(e.target.value) } />
       <input type="submit" value="Submit" />
-
     </form>
+    </div>
   );
 }

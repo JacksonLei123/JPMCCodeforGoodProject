@@ -33,20 +33,18 @@ class Reviews extends React.Component {
           }
         });
 
-        this.setState({data: [...this.state.data, ...newData]}); 
+        this.setState({data: [...newData, ...this.state.data]}); 
       }) 
-      .then(() => {
-        fetch('./data.csv')
-        .then((r) => r.text())
-        .then(text => {
-        let tmp = text.split("\n").map((entry, idx) => {
-          return {
-            "message": entry,
-            "stars": (2 - idx % 3) + 3,
-          };
-        });
-        this.setState({data: [...this.state.data, ...tmp]});
+      fetch('./data.csv')
+      .then((r) => r.text())
+      .then(text => {
+      let tmp = text.split("\n").map((entry, idx) => {
+        return {
+          "message": entry,
+          "stars": (2 - idx % 3) + 3,
+        };
       });
+      this.setState({data: [...this.state.data, ...tmp]});
     });
     
   }
