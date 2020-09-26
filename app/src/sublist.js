@@ -57,7 +57,7 @@ export default function SubList(props) {
                     return (
                         <Grid key={idx} item>
                             <ListItem button className={classes.stacked}>
-                            <Rating name="size-small" defaultValue={entry.stars} size="small" />
+                            <Rating name="size-small" defaultValue={entry.stars} size="small" readOnly />
                             <ListItemText primary={entry.message}/>
                             </ListItem>
                         </Grid>
@@ -65,6 +65,5 @@ export default function SubList(props) {
                 })
             }
         </Grid>
-    
     );
   }

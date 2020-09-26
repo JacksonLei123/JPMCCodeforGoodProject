@@ -52,11 +52,9 @@ class Reviews extends React.Component {
     return (
       <div className="Reviews">
         <SubList entries={this.state.data.slice(begin, end)} />
-        <Divider/>
         <Button variant="contained" color="default" onClick={() => this.handleMvmt(-1)}> <ArrowBackwardIcon/> </Button>
         <Button variant="contained" color="default" onClick={() => this.handleMvmt(1)}> <ArrowForwardIcon/> </Button>
-        
-        <Typography>{this.state.start_idx * 3 + 1}/{this.state.data.length}</Typography>
+        <Divider/>
       </div>
     );
   }
